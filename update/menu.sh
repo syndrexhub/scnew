@@ -21,6 +21,7 @@ echo -e "$yy 10$y. XRAY TROJAN MENU$wh"
 echo -e "$yy 11$y. TROJAN GO MENU$wh"
 echo -e "$yy 12$y. XRAY GRPC MENU$wh"
 echo -e "$yy 13$y. Exit
+echo -e "$y-------------------------------------------------$wh"
 echo -e   ""read -p "Select From Options [ 1 - 12 ] : " menu
 case $menu in
 1)
