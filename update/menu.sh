@@ -6,7 +6,7 @@ yy="\033[0;1;32m"
 yl="\033[0;1;33m"
 wh="\033[0m"
 echo -e "$y                  MENU UTAMA $wh"
-echo -e "$y            Script nikstore $wh"
+echo -e "$y               Script nikstore $wh"
 echo -e "$y-------------------------------------------------$wh"
 echo -e "$yy 1$y.  SSH & OpenVPN MENU  $wh"
 echo -e "$yy 2$y.  L2TP MENU$wh"
@@ -22,7 +22,7 @@ echo -e "$yy 11$y. TROJAN GO MENU$wh"
 echo -e "$yy 12$y. XRAY GRPC MENU$wh"
 echo -e "$yy 13$y. Exit
 echo -e "$y-------------------------------------------------$wh"
-echo -e   ""read -p "Select From Options [ 1 - 12 ] : " menu
+echo -e   ""read -p "Select From Options [ 1 - 13 ] : " menu
 case $menu in
 1)
 clear
