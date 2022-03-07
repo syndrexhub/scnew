@@ -5,32 +5,20 @@ y="\033[0;1;37m"
 yy="\033[0;1;32m"
 yl="\033[0;1;33m"
 wh="\033[0m"
-echo -e "$y                  MENU UTAMA $wh"
-echo -e "$y            Script Mod By SL $wh"
-echo -e "$y-------------------------------------------------$wh"
-echo -e "$yy 1$y.  SSH & OpenVPN MENU  $wh"
-echo -e "$yy 2$y.  L2TP MENU$wh"
-echo -e "$yy 3$y.  PPTP MENU$wh"
-echo -e "$yy 4$y.  SSTP MENU$wh"
-echo -e "$yy 5$y.  WIREGUARD MENU$wh"
-echo -e "$yy 6$y.  SHADOWSOCKS MENU$wh"
-echo -e "$yy 7$y.  SHADOWSOCKSR MENU$wh"
-echo -e "$yy 8$y.  XRAY VMESS MENU$wh"
-echo -e "$yy 9$y.  XRAY VLESS MENU$wh"
-echo -e "$yy 10$y. XRAY TROJAN MENU$wh"
-echo -e "$yy 11$y. TROJAN GO MENU$wh"
-echo -e "$yy 12$y. XRAY GRPC MENU$wh"
-echo -e "$yy 13$y. SLOWDNS MENU (OFF)$wh"
-echo -e "$yy 14$y. CEK SEMUA IP PORT$wh"
-echo -e "$yy 15$y. CEK SEMUA SERVICE VPN$wh"
-echo -e "$yy 16$y. UPDATE MENU (2x)$wh"
-echo -e "$yy 17$y. SL-FIX (Perbaiki Error SSLH+WS-TLS setelah reboot)$wh"
-echo -e "$yy 18$y. Settings (Pengaturan)$wh"
-echo -e "$yy 19$y. Exit (Keluar)$wh"
-echo -e "$yy 20$y. copyrepo (Salin Repo Script scnew)$wh"
-echo -e "$yy 21$y. menuinfo (Untuk Mendapatkan Informasi)$wh"
-echo -e "$y-------------------------------------------------$wh"
-read -p "Select From Options [ 1 - 21 ] : " menu
+echo -e  "$PURPLE  .-------------------------------------------------------."
+echo -e  "$PURPLE  |                    $Blink $yell Dashboard Menu$NC                   $PURPLE|"
+echo -e  "$PURPLE  '-------------------------------------------------------'$NC"
+echo -e "   $green 1)$NC $yell SSH & OpenVPN Menu        $green  7)$NC $yell SHADOWSOCKSR MENU"
+echo -e "   $green 2)$NC $yell L2TP MENU                 $green  8)$NC $yell VMESS MENU"
+echo -e "   $green 3)$NC $yell PPTP MENU                 $green  9)$NC $yell VLESS MENU"
+echo -e "   $green 4)$NC $yell SSTP MENU                 $green 10)$NC $yell TROJAN GFW MENU"
+echo -e "   $green 5)$NC $yell WIREGUARD MENU            $green 11)$NC $yell TROJAN GO MENU"
+echo -e "   $green 6)$NC $yell SHADOWSOCKS MENU          $green 12)$NC $red GRPC MENU"
+echo -e "                        $green 13)$NC $yell NEXT MENU"
+echo -e  "$PURPLE  .-------------------------------------------------------."
+echo -e  "$PURPLE  |                $yell Script status : Premium$NC               $PURPLE|"
+echo -e  "$PURPLE  '-------------------------------------------------------'$NC"
+echo -e   ""read -p "Select From Options [ 1 - 12 ] : " menu
 case $menu in
 1)
 clear
@@ -82,42 +70,6 @@ grpcmenu
 ;;
 13)
 clear
-slowdnsmenu
-;;
-14)
-clear
-ipsaya
-;;
-15)
-clear
-running
-;;
-16)
-clear
-updatemenu
-;;
-17)
-clear
-sl-fix
-;;
-18)
-clear
 setmenu
-;;
-19)
-clear
-exit
-;;
-20)
-clear
-copyrepo
-;;
-21)
-clear
-menuinfo
-;;
-*)
-clear
-menu
 ;;
 esac
