@@ -240,7 +240,7 @@ systemctl enable vnstat
 rm -f /root/vnstat-2.6.tar.gz
 rm -rf /root/vnstat-2.6
 
-# install stunnel 5 
+# install stunnel 5
 cd /root/
 wget -q -O stunnel5.zip "https://${akbarvpnnnn}/stunnel5.zip"
 unzip -o stunnel5.zip
@@ -254,6 +254,9 @@ rm -r -f stunnel
 rm -f stunnel5.zip
 mkdir -p /etc/stunnel5
 chmod 644 /etc/stunnel5
+
+# install port grpc
+wget -O portgrpc "https://${akbarvpn}/portgrpc.sh"
 
 # Download Config Stunnel5
 cat > /etc/stunnel5/stunnel5.conf <<-END
@@ -422,6 +425,7 @@ wget -O renewtrgo "https://${akbarvpnnn}/renewtrgo.sh"
 wget -O cektrgo "https://${akbarvpnnn}/cektrgo.sh"
 wget -O portsshnontls "https://raw.githubusercontent.com/nikstore/scnew/main/websocket/portsshnontls.sh"
 wget -O portsshws "https://raw.githubusercontent.com/nikstore/scnew/main/websocket/portsshws.sh"
+wget -O portgrpc "https://${akbarvpn}/portgrpc.sh"
 
 wget -O ipsaya "https://raw.githubusercontent.com/nikstore/scnew/main/update/ipsaya.sh"
 wget -O sshovpnmenu "https://raw.githubusercontent.com/nikstore/scnew/main/update/sshovpn.sh"
@@ -466,7 +470,7 @@ chmod +x updatemenu
 
 chmod +x portsshnontls
 chmod +x portsshws
-
+chmod +x portgrpc
 chmod +x slhost
 chmod +x addhost
 chmod +x menu
