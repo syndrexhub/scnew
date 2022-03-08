@@ -22,7 +22,7 @@ echo -e "$yy 11$y. TROJAN GO MENU$wh"
 echo -e "$yy 12$y. XRAY GRPC MENU$wh"
 echo -e "$yy 13$y. Exit
 echo -e "$y-------------------------------------------------$wh"
-read -p "Select From Options [ 1 - 13 ] : " menu
+read -p "Select From Options [ 1 - 21 ] : " menu
 case $menu in
 1)
 clear
@@ -75,5 +75,8 @@ grpcmenu
 13)
 clear
 setmenu
+;;
+*)
+echo -e "ERROR!! Please Enter an Correct Number"
 ;;
 esac
