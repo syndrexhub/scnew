@@ -97,13 +97,20 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "   $green Upload               :$NC  $uploadsize GB ( From Startup / VPS Booting )"
 	echo -e "   $green Isp Name             :$NC  $ISP"
 	echo -e "   $green Domain               :$NC  $domain"
-  echo -e "   $green Ip Vps               :$NC  $IPVPS"	
+  echo -e "   $green Ip Vps               :$NC  $IPVPS"
 	echo -e "   $green City                 :$NC  $CITY"
 	echo -e "   $green Time                 :$NC  $WKT"
 	echo -e "   $green Day                  :$NC  $DAY"
 	echo -e "   $green Date                 :$NC  $DATE"
 	echo -e "   $green Telegram             :$NC  $tele"
 	echo -e "   $green Script Version       :$NC  $Sver"
+
+
+#paste ini di menu anda. Terpulang kepada tempat yg anda mahu. Sebaiknya di atas info detail vps anda.
+banner=$(cat /var/lib/banner-name/banner)
+echo ""
+figlet -f standard "$banner" | lolcat
+echo "_______________"
 
 echo -e "$y                  MENU UTAMA $wh"
 echo -e "$y               Script nikstore $wh"
@@ -129,6 +136,7 @@ echo -e "$yy 18$y. Settings (Pengaturan)$wh"
 echo -e "$yy 19$y. Exit (Keluar)$wh"
 echo -e "$yy 20$y. copyrepo (Salin Repo Script Mantap)$wh"
 echo -e "$yy 21$y. menuinfo (Untuk Mendapatkan Informasi)$wh"
+echo -e "$yy 22$y. tukar bannermenuinfo (Untuk Mendapatkan Informasi)$wh"
 echo -e "$y-------------------------------------------------$wh"
 read -p "Select From Options [ 1 - 21 ] : " menu
 case $menu in
@@ -215,6 +223,10 @@ copyrepo
 21)
 clear
 menuinfo
+;;
+22)
+clear
+banner
 ;;
 *)
 clear

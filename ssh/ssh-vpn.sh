@@ -9,6 +9,27 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
+
+apt -y install python
+apt -y install tmux
+apt -y install ruby
+gem install lolcat
+sudo snap install lolcat -y
+sudo apt-get install figlet -y
+
+# install
+apt install neofetch
+apt-get --reinstall --fix-missing install -y linux-headers-cloud-amd64 bzip2 gzip coreutils wget screen rsyslog iftop htop net-tools zip unzip wget net-tools curl nano sed screen gnupg gnupg1 bc apt-transport-https build-essential dirmngr libxml-parser-perl neofetch git lsof
+echo "clear" >> .profile
+echo "neofetch" >> .profile
+
+cd /usr/bin
+wget -O menu "https://raw.githubusercontent.com/namagithub/namarepo/main/menu.sh"
+wget -O banner "https://raw.githubusercontent.com/namagithub/namarepo/main/banner.sh"
+chmod +x menu
+chmod +x banner
+mkdir /var/lib/banner-name;
+echo -e "Premium" >> /var/lib/banner-name/banner
 # ==========================================
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
