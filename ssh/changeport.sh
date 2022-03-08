@@ -24,7 +24,8 @@ echo -e "[5]. Change Port Squid"
 echo -e "[6]. Change Port SSTP"
 echo -e "[7]. Change Port SSH WS HTTP"
 echo -e "[8]. Change Port SSH WS TLS / SSL"
-echo -e "[9]. Exit"
+echo -e "[9]. Change Port Grpc vmess && vless
+echo -e "[10]. Exit"
 echo -e ""
 echo -e "======================================"
 echo -e ""
@@ -56,6 +57,9 @@ portsshnontls
 portsshws
 ;;
 9)
+portgrpc
+;;
+10)
 clear
 menu
 ;;

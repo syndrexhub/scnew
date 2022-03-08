@@ -46,13 +46,13 @@ cat > /etc/xray/$user-tls.json << EOF
 EOF
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmesslink1="vmess://$(base64 -w 0 /etc/xray/$user-tls.json)"
-vlesslink1="vless://${uuid}@${domain}:${vl}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService&sni=${domain}#$user"
+vlesslink1="vless://${uuid}@${domain}:${vl}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService&sni=${sni}#$user"
 systemctl restart sl-vmess-grpc.service
 systemctl restart sl-vless-grpc.service
 service cron restart
 clear
 echo -e "================================="
-echo -e "            XRAY GRPC            " 
+echo -e "            XRAY GRPC            "
 echo -e "================================="
 echo -e "Remarks           : ${user}"
 echo -e "Domain            : ${domain}"
@@ -64,7 +64,7 @@ echo -e "Mode              : Gun"
 echo -e "Security          : TLS"
 echo -e "Type              : grpc"
 echo -e "Service Name      : GunService"
-echo -e "SNI               : ${domain}"
+echo -e "SNI               : ${sni}"
 echo -e "================================="
 echo -e "Link VMess GRPC  : "
 echo -e "${vmesslink1}"
@@ -73,5 +73,5 @@ echo -e "Link VLess GRPC  : "
 echo -e "${vlesslink1}"
 echo -e "================================="
 echo -e "Expired On     : $exp"
-echo -e "=================================" 
+echo -e "================================="
 echo -e " Script Mod By SL"
