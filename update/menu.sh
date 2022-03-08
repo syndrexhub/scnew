@@ -76,7 +76,4 @@ grpcmenu
 clear
 setmenu
 ;;
-*)
-echo -e "ERROR!! Please Enter an Correct Number"
-;;
 esac
