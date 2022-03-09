@@ -6,7 +6,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 domain=$(cat /etc/xray/domain)
 apt install iptables iptables-persistent -y
-apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
+apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y
 apt install socat cron bash-completion ntpdate -y
 ntpdate pool.ntp.org
 apt -y install chrony
@@ -24,7 +24,7 @@ latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases |
 # / / Installation Xray Core
 xraycore_link="https://github.com/XTLS/Xray-core/releases/download/v$latest_version/xray-linux-64.zip"
 
-# 
+#
 uuid=$(cat /proc/sys/kernel/random/uuid)
 
 # / / Make Main Directory
@@ -54,7 +54,7 @@ cat > /etc/xray/sl-vmessgrpc.json << END
     },
     "inbounds": [
         {
-            "port": 1180,
+            "port": 1999,
             "protocol": "vmess",
             "settings": {
                 "clients": [
