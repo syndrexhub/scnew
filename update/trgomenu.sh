@@ -16,7 +16,7 @@ echo -e "$yy 6$y. Menu"
 echo -e "$yy 7$y. Exit"
 echo -e "$y-------------------------------------------------------------$wh"
 read -p "Select From Options [ 1 - 6 ] : " menu
-echo -e ""
+echo -e "tekan no yang betul lee"
 case $menu in
 1)
 addtrgo
