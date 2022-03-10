@@ -11,12 +11,12 @@ echo -e "$yy 1$y. Create Account Trojan Go"
 echo -e "$yy 2$y. Delete Account Trojan Go"
 echo -e "$yy 3$y. Extending Account Trojan Go Active Life"
 echo -e "$yy 4$y. Check User Login Trojan Go"
-echo -e "$yy 5$y. General Trial Trgo
+echo -e "$yy 5$y. General Trial Trgo"
 echo -e "$yy 6$y. Menu"
 echo -e "$yy 7$y. Exit"
 echo -e "$y-------------------------------------------------------------$wh"
 read -p "Select From Options [ 1 - 6 ] : " menu
-echo -e "tekan no yang betul lee"
+echo -e ""
 case $menu in
 1)
 addtrgo
