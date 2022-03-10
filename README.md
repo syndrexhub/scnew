@@ -341,7 +341,7 @@ sudo apt autoclean && sudo apt autoremove
 
 • OHP OpenVPN             : 8383
 
-• Trojan Go               : 2087
+• Trojan Go               : 443
 
 • CloudFront Websocket    : [OFF]
 

@@ -18,7 +18,7 @@ IP=$(wget -qO- ipinfo.io/ip);
 echo -e "checking vps"
 domain=$(cat /root/domain)
 apt install iptables iptables-persistent -y
-apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y 
+apt install curl socat xz-utils wget apt-transport-https gnupg gnupg2 gnupg1 dnsutils lsb-release -y
 apt install socat cron bash-completion ntpdate -y
 ntpdate pool.ntp.org
 apt -y install chrony
@@ -568,7 +568,7 @@ cat > /etc/xray/trojan.json <<END
   },
   "inbounds": [
     {
-      "port": 2087,
+      "port": 443,
       "protocol": "trojan",
       "settings": {
         "clients": [
@@ -685,8 +685,8 @@ iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2095 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2095 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2087 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2087 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 443 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 443 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2053 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p tcp --dport 2053 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
@@ -699,12 +699,12 @@ systemctl stop xray@v2ray-nontls
 systemctl stop xray@vless-tls
 systemctl stop xray@vless-nontls
 systemctl stop xray@trojan
-systemctl start xray@v2ray-tls 
-systemctl start xray@v2ray-nontls 
-systemctl start xray@vless-tls 
-systemctl start xray@vless-nontls 
+systemctl start xray@v2ray-tls
+systemctl start xray@v2ray-nontls
+systemctl start xray@vless-tls
+systemctl start xray@vless-nontls
 systemctl start xray@trojan
-systemctl start xray@vless-grpc 
+systemctl start xray@vless-grpc
 systemctl enable xray@v2ray-tls
 systemctl enable xray@v2ray-nontls
 systemctl enable xray@vless-tls

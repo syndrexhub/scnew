@@ -155,7 +155,7 @@ echo "   - Websocket Ovpn          : 2086"  | tee -a log-install.txt
 echo "   - OHP SSH                 : 8181"  | tee -a log-install.txt
 echo "   - OHP Dropbear            : 8282"  | tee -a log-install.txt
 echo "   - OHP OpenVPN             : 8383"  | tee -a log-install.txt
-echo "   - TrojanGo                : 2087"  | tee -a log-install.txt
+echo "   - TrojanGo                : 443"  | tee -a log-install.txt
 echo "   - SLOWDNS OpenSSH         : 2253[OFF]"  | tee -a log-install.txt
 echo "   - SLOWDNS Dropbear        : 1153[OFF]"  | tee -a log-install.txt
 echo "   - SLOWDNS SSL/TLS         : 3353[OFF]"  | tee -a log-install.txt
