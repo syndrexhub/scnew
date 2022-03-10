@@ -17,6 +17,14 @@ BLUE='\033[0;34m'
 PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
+clear
+echo -e "$green   =============================================$NC"
+echo -e "$green               ENTER YOUR CLIENT NAME:          $NC"
+echo -e "$green   =============================================$NC"
+read -p "CLIENT NAME: " Name
+echo "V1.0" >> /home/version
+echo "@naimstore" >> /home/contact
+sleep 2
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn
 akbarvpn="raw.githubusercontent.com/nikstore/scnew/main/ssh"
