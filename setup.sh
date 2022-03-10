@@ -144,8 +144,8 @@ echo "   - XRAYS Vmess None TLS    : 80"  | tee -a log-install.txt
 echo "   - XRAYS Vless TLS         : 8443"  | tee -a log-install.txt
 echo "   - XRAYS Vless None TLS    : 80"  | tee -a log-install.txt
 echo "   - XRAYS Trojan            : 2083"  | tee -a log-install.txt
-echo "   - XRAYS VMESS GRPC        : 1180"  | tee -a log-install.txt
-echo "   - XRAYS VLESS GRPC        : 2280"  | tee -a log-install.txt
+echo "   - XRAYS VMESS GRPC        : 80"  | tee -a log-install.txt
+echo "   - XRAYS VLESS GRPC        : 80"  | tee -a log-install.txt
 echo "   - CloudFront Websocket    : "  | tee -a log-install.txt
 echo "   - Websocket TLS           : 443"  | tee -a log-install.txt
 echo "   - Websocket None TLS      : 8880"  | tee -a log-install.txt
@@ -159,7 +159,7 @@ echo "   - SLOWDNS Dropbear        : 1153[OFF]"  | tee -a log-install.txt
 echo "   - SLOWDNS SSL/TLS         : 3353[OFF]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
-echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
+echo "   - Timezone                : Asia/Malaysia (GMT +8)"  | tee -a log-install.txt
 echo "   - Fail2Ban                : [ON]"  | tee -a log-install.txt
 echo "   - Dflate                  : [ON]"  | tee -a log-install.txt
 echo "   - IPtables                : [ON]"  | tee -a log-install.txt

@@ -104,7 +104,7 @@ cat > /etc/xray/sl-vlessgrpc.json << END
     },
     "inbounds": [
         {
-            "port": 2280,
+            "port": 80,
             "protocol": "vless",
             "settings": {
                 "clients": [
@@ -150,13 +150,11 @@ cat > /etc/systemd/system/sl-vmess-grpc.service << EOF
 Description=XRay VMess GRPC Service
 Documentation=https://speedtest.net https://github.com/XTLS/Xray-core
 After=network.target nss-lookup.target
-
 [Service]
 User=root
 NoNewPrivileges=true
 ExecStart=/usr/local/bin/xray -config /etc/xray/sl-vmessgrpc.json
 RestartPreventExitStatus=23
-
 [Install]
 WantedBy=multi-user.target
 EOF
@@ -166,21 +164,19 @@ cat > /etc/systemd/system/sl-vless-grpc.service << EOF
 Description=XRay VMess GRPC Service
 Documentation=https://speedtest.net https://github.com/XTLS/Xray-core
 After=network.target nss-lookup.target
-
 [Service]
 User=root
 NoNewPrivileges=true
 ExecStart=/usr/local/bin/xray -config /etc/xray/sl-vlessgrpc.json
 RestartPreventExitStatus=23
-
 [Install]
 WantedBy=multi-user.target
 EOF
 
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 1180 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 1180 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2280 -j ACCEPT
-iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2280 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 80 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 80 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save

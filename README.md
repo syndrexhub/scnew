@@ -331,9 +331,9 @@ sudo apt autoclean && sudo apt autoremove
 
 • XRAYS Trojan            : 2083
 
-• XRAYS Vmess GRPC TLS    : 1180
+• XRAYS Vmess GRPC TLS    : 80
 
-• XRAYS Vless GRPC TLS    : 2280
+• XRAYS Vless GRPC TLS    : 80
 
 • OHP SSH                 : 8181
 
