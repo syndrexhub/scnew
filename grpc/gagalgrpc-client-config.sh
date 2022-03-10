@@ -21,7 +21,7 @@ cat <<EOF >>/etc/xray/grpc-client-config.json
     },
     "inbounds": [{
         "listen": "127.0.0.1", //监听
-        "port": "1999", //端口
+        "port": "80", //端口
         "protocol": "socks", //socks
         "settings": {
             "auth": "noauth"

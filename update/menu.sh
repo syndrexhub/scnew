@@ -104,6 +104,7 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "   $green Date                 :$NC  $DATE"
 	echo -e "   $green Telegram             :$NC  $tele"
 	echo -e "   $green Script Version       :$NC  $Sver"
+	echo -e "   $green Client Name          :$NC  $Name"
 
 
 #paste ini di menu anda. Terpulang kepada tempat yg anda mahu. Sebaiknya di atas info detail vps anda.

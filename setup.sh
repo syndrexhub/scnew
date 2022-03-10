@@ -22,8 +22,10 @@ echo -e "$green   =============================================$NC"
 echo -e "$green               ENTER YOUR CLIENT NAME:          $NC"
 echo -e "$green   =============================================$NC"
 read -p "CLIENT NAME: " Name
+echo "$Name" >> /home/client
 echo "V1.0" >> /home/version
 echo "@naimstore" >> /home/contact
+
 sleep 2
 # ==========================================
 # Link Hosting Kalian Untuk Ssh Vpn

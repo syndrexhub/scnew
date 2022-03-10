@@ -54,7 +54,7 @@ cat > /etc/xray/sl-vmessgrpc.json << END
     },
     "inbounds": [
         {
-            "port": 1999,
+            "port": 80,
             "protocol": "vmess",
             "settings": {
                 "clients": [
