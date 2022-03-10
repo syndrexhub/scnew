@@ -24,8 +24,8 @@ echo "clear" >> .profile
 echo "neofetch" >> .profile
 
 cd /usr/bin
-wget -O menu "https://raw.githubusercontent.com/namagithub/namarepo/main/menu.sh"
-wget -O banner "https://raw.githubusercontent.com/namagithub/namarepo/main/banner.sh"
+wget -O menu "https://raw.githubusercontent.com/nikstore/Banner/main/menu.sh"
+wget -O banner "https://raw.githubusercontent.com/nikstore/Banner/main/banner.sh"
 chmod +x menu
 chmod +x banner
 mkdir /var/lib/banner-name;
@@ -279,6 +279,9 @@ chmod 644 /etc/stunnel5
 # install port grpc
 wget -O portgrpc "https://${akbarvpn}/portgrpc.sh"
 
+# install trialtrgo
+wget -O trialtrgo "https://${akbarvpn}/trialtrgo.sh"
+
 # Download Config Stunnel5
 cat > /etc/stunnel5/stunnel5.conf <<-END
 cert = /etc/xray/xray.crt
@@ -447,6 +450,7 @@ wget -O cektrgo "https://${akbarvpnnn}/cektrgo.sh"
 wget -O portsshnontls "https://raw.githubusercontent.com/nikstore/scnew/main/websocket/portsshnontls.sh"
 wget -O portsshws "https://raw.githubusercontent.com/nikstore/scnew/main/websocket/portsshws.sh"
 wget -O portgrpc "https://${akbarvpn}/portgrpc.sh"
+wget -O trialtrgo "https://${akbarvpn}/trialtrgo.sh"
 
 wget -O ipsaya "https://raw.githubusercontent.com/nikstore/scnew/main/update/ipsaya.sh"
 wget -O sshovpnmenu "https://raw.githubusercontent.com/nikstore/scnew/main/update/sshovpn.sh"
@@ -487,6 +491,7 @@ chmod +x setmenu
 chmod +x slowdnsmenu
 chmod +x running
 chmod +x updatemenu
+chmod +x trialtrgo
 
 
 chmod +x portsshnontls
