@@ -6,8 +6,9 @@ y="\033[0;1;37m"
 yy="\033[0;1;32m"
 yl="\033[0;1;33m"
 wh="\033[0m"
-echo -e "$y                   SYSTEM SETTING$wh"
-echo -e "$y-------------------------------------------------------------$wh"
+echo -e  "  ╠═════════════════════════════════════════════════════════════════╗" | lolcat
+echo -e  "  ║                           ┃ SYSTEM  ┃                           ║" | lolcat
+echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat
 echo -e "$yy 1$y.  Add Or Change Subdomain Host For VPS"
 echo -e "$yy 2$y.  Change Port Of Some Service"
 echo -e "$yy 3$y.  Autobackup Data VPS"

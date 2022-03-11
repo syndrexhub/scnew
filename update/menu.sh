@@ -107,15 +107,15 @@ IPVPS=$(curl -s ipinfo.io/ip )
 	echo -e "   $green Client Name          :$NC  $Name"
 
 
-#paste ini di menu anda. Terpulang kepada tempat yg anda mahu. Sebaiknya di atas info detail vps anda.
+
 banner=$(cat /var/lib/banner-name/banner)
 echo ""
 figlet -f standard "$banner" | lolcat
 echo "_______________"
 
-echo -e "$y                  MENU UTAMA $wh"
-echo -e "$y               Script nikstore $wh"
-echo -e "$y-------------------------------------------------$wh"
+echo -e  "  ╔═════════════════════════════════════════════════════════════════╗" | lolcat
+echo -e  "  ║                          ┃ MAIN MENU ┃                          ║" |lolcat
+echo -e  "  ╠═════════════════════════════════════════════════════════════════╝" | lolcat
 echo -e "$yy 1$y.  SSH & OpenVPN MENU  $wh"
 echo -e "$yy 2$y.  L2TP MENU$wh"
 echo -e "$yy 3$y.  PPTP MENU$wh"
@@ -139,7 +139,7 @@ echo -e "$yy 20$y. copyrepo (Salin Repo Script Mantap)$wh"
 echo -e "$yy 21$y. menuinfo (Untuk Mendapatkan Informasi)$wh"
 echo -e "$yy 22$y. tukar banner$wh"
 echo -e "$y-------------------------------------------------$wh"
-read -p "Select From Options [ 1 - 21 ] : " menu
+read -p "Select From Options [ 1 - 22 ] : " menu
 case $menu in
 1)
 clear
